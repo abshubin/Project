@@ -24,6 +24,8 @@ public class DealershipController {
             + "/IdeaProjects/DealershipProject"
             + "/src/main/java/shu/dealership/inventory.txt";
 
+    @Log
+    @Timed
     @RequestMapping(value = "/addVehicle", method = RequestMethod.POST)
     public Vehicle addVehicle(@RequestBody Vehicle newVehicle) throws IOException {
         // ObjectMapper provides functionality for reading and writing JSON
@@ -44,6 +46,8 @@ public class DealershipController {
         return newVehicle;
     }
 
+    @Log
+    @Timed
     @RequestMapping(value = "/getVehicle/{id}", method = RequestMethod.GET)
     public Vehicle getVehicle(@PathVariable("id") int id) throws IOException {
         List<Vehicle> vehicles = readVehicles();
@@ -57,6 +61,8 @@ public class DealershipController {
         return null;
     }
 
+    @Log
+    @Timed
     @RequestMapping(value = "/updateVehicle", method = RequestMethod.PUT)
     public Vehicle updateVehicle(@RequestBody Vehicle newVehicle) throws IOException {
         List<Vehicle> vehicles = readVehicles();
@@ -74,6 +80,8 @@ public class DealershipController {
         return newVehicle;
     }
 
+    @Log
+    @Timed
     @RequestMapping(value = "/deleteVehicle/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<String> deleteVehicle(@PathVariable("id") int id) throws IOException {
         List<Vehicle> vehicles = readVehicles();

@@ -50,7 +50,7 @@ public class AutoTasks {
         Vehicle newVehicle = new Vehicle(updateId, "UPDATED", 0, 0);
         restTemplate.put(putURL, newVehicle, Vehicle.class);
         Vehicle testVehicle = restTemplate.getForObject(getURL + "/" + updateId, Vehicle.class);
-        System.out.println("UPDATED attempted on Vehicle with ID = " + updateId);
+        System.out.println("UPDATE attempted on Vehicle with ID = " + updateId);
         String message;
         if (testVehicle != null) {
             try {

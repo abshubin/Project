@@ -21,7 +21,7 @@ import java.util.List;
 public class DealershipController {
 
     private final String PATH = FileUtils.getUserDirectoryPath()
-            + "/IdeaProjects/DealershipProject"
+            + "/IdeaProjects/Project2"
             + "/src/main/java/shu/dealership/inventory.txt";
 
     @Log
